@@ -18,7 +18,7 @@ BOUNDING_BOX_ANNOTATOR = sv.BoundingBoxAnnotator()
 MASK_ANNOTATOR = sv.MaskAnnotator()
 LABEL_ANNOTATOR = sv.LabelAnnotator()
 
-folder_paths.folder_names_and_paths["yolo_world"] = ([os.path.join(folder_paths.models_dir, "yolo_world")], folder_paths.supported_pt_extensions)
+folder_paths.folder_names_and_paths["yolo_world"] = ([os.path.join(folder_paths.models_dir, "yolo_world"), "/stable-diffusion-cache/models/yolo_world"], folder_paths.supported_pt_extensions)
 
 def process_categories(categories: str) -> List[str]:
     return [category.strip() for category in categories.split(',')]
