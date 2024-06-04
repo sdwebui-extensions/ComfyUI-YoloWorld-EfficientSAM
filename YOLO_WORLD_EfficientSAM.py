@@ -6,10 +6,11 @@ import numpy as np
 import supervision as sv
 import torch
 from tqdm import tqdm
-from inference.models import YOLOWorld
 
 from .utils.efficient_sam import load, inference_with_boxes
 from .utils.video import generate_file_name, calculate_end_frame_index, create_directory
+
+YOLOWorld = None
 
 current_directory = os.path.dirname(os.path.abspath(__file__))
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
@@ -67,6 +68,9 @@ class Yoloworld_ModelLoader_Zho:
     CATEGORY = "🔎YOLOWORLD_ESAM"
   
     def load_yolo_world_model(self, yolo_world_model):
+        global YOLOWorld
+        if YOLOWorld is None:
+            from inference.models import YOLOWorld
         YOLO_WORLD_MODEL = YOLOWorld(model_id=yolo_world_model)
 
         return [YOLO_WORLD_MODEL]
