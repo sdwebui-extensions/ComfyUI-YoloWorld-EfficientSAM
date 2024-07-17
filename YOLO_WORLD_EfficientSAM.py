@@ -98,7 +98,7 @@ class ESAM_ModelLoader_Zho:
             if os.path.exists('/stable-diffusion-cache/models/esam_model'):
                 model_path = '/stable-diffusion-cache/models/esam_model/efficient_sam_s_gpu.jit'
             else:
-                model_path = os.path.join(current_directory, "efficient_sam_s_gpu.jit")
+                model_path = os.path.join(current_directory, "efficient_sam_s_cpu.jit")
         else:
             if os.path.exists('/stable-diffusion-cache/models/esam_model'):
                 model_path = '/stable-diffusion-cache/models/esam_model/efficient_sam_s_cpu.jit'

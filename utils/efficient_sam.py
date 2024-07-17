@@ -24,6 +24,7 @@ def inference_with_box(
     bbox = torch.reshape(torch.tensor(box), [1, 1, 2, 2])
     bbox_labels = torch.reshape(torch.tensor([2, 3]), [1, 1, 2])
     img_tensor = ToTensor()(image)
+    device = 'cpu'
 
     predicted_logits, predicted_iou = model(
         img_tensor[None, ...].to(device),
