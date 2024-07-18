@@ -96,7 +96,7 @@ class ESAM_ModelLoader_Zho:
     def load_esam_model(self, device):
         if device == "CUDA":
             if os.path.exists('/stable-diffusion-cache/models/esam_model'):
-                model_path = '/stable-diffusion-cache/models/esam_model/efficient_sam_s_gpu.jit'
+                model_path = '/stable-diffusion-cache/models/esam_model/efficient_sam_s_cpu.jit'
             else:
                 model_path = os.path.join(current_directory, "efficient_sam_s_cpu.jit")
         else:
