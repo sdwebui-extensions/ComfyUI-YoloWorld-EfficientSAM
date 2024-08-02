@@ -58,7 +58,7 @@ class Yoloworld_ModelLoader_Zho:
     def INPUT_TYPES(cls):
         return {
             "required": {
-                "yolo_world_model": (["yolo_world/l", "yolo_world/m", "yolo_world/s"], ),
+                "yolo_world_model": (["yolo_world/l", "yolo_world/m", "yolo_world/s", "yolo_world/v2-x", "yolo_world/v2-l", "yolo_world/v2-m", "yolo_world/v2-s"], ),
             }
         }
 
